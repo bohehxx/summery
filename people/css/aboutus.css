@@ -1,0 +1,71 @@
+.banner{
+  width:100%;
+}
+.banner img{
+  width:100%;
+}
+
+.introduction .pic{
+  width:948px;
+  margin:35px auto;
+
+}
+.introduction p{
+  font-size:18px;
+  color:#333;
+  line-height:32px;
+  text-indent:2em;
+  margin-bottom:15px;
+}
+.contact{
+  display:none;
+}
+.contact .pic{
+  width:495px;
+  margin-top:40px;
+}
+.contact .contact-way{
+  width:330px;
+  margin-top:128px;
+  margin-left:75px;
+}
+.contact .contact-way .press{
+  color:#333;
+  font-size:24px;
+  letter-spacing:5px;
+  margin-bottom:25px;
+}
+.contact .contact-way .press .line{
+  font-size:18px;
+}
+.contact .contact-way p{
+  font-size:16px;
+  color:#333;
+  line-height:40px;
+}
+.organize{
+  display:none;
+}
+.organize .pic{
+  width:992px;
+  margin:50px auto 0;
+}
+.honor{
+  display:none;
+  margin-top:20px;
+}
+.honor .pic{
+ margin-top:40px;
+}
+.honor .pic img{
+  width:268px;
+  height:186px;
+  margin-right:93px;
+}
+
+.honor p{
+  font-size:18px;
+  line-height:32px;
+  color:#333;
+  text-indent:2em;
+}

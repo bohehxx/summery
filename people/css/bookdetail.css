@@ -1,0 +1,123 @@
+.outline{
+    padding-top:40px;
+}
+.outline .pic{
+    width:240px;
+}
+.outline .pic img{
+    width:100%;
+}
+.outline .txt{
+    margin-left:98px;
+}
+.outline .txt h1{
+    font-size:24px;
+    color:#333;
+    margin-top:13px;
+    margin-bottom:30px;
+
+}
+.outline .txt p{
+    line-height:36px;
+    font-size:14px;
+    color:#333;
+}
+.share{
+    height:36px;
+    line-height:36px;
+}
+.share .ss{
+    display:inline-block;
+    margin-right:10px;
+}
+.share ul{
+    height:35px;
+    background:url("../images/share.png") no-repeat left center;
+}
+.share li{
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin-right:12px;
+    cursor:pointer;
+}
+.abstract{
+    margin-top:30px;
+}
+.abstract h1{
+    font-size:18px;
+    color:#333;
+    margin-bottom:15px;
+}
+.leftTxt{
+    width:215px;
+    margin-right:100px;
+}
+.rightTxt{
+    width:190px;
+}
+.abstract p{
+    font-size:14px;
+    color:#333;
+    line-height:30px;
+}
+.authorBrief{
+    margin-top:40px;
+
+}
+.authorBrief .title,.feather .title{
+    line-height:40px;
+    color:#252525;
+    font-size:16px;
+
+}
+.bookLink {
+    -webkit-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+    -moz-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+    box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+    display: block;
+    width: 212px;
+    height: 286px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 0;
+    background-color: #656566;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+    background: 0 0;
+}
+.bookLink:hover{
+    _zoom: 1;
+}
+.bookImg{
+    transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transition: transform .5s ease 0s;
+    -moz-transition: -moz-transform .5s ease 0s;
+    -ms-transition: -ms-transform .5s ease 0s;
+    -webkit-transition: -webkit-transform .5s ease 0s;
+    -webkit-animation: ffk-animate 1s 1;
+    -moz-animation: ffk-animate 1s 1;
+    -ms-animation: ffk-animate 1s 1;
+    animation: ffk-animate 1s 1;
+    position: relative;
+    width: 212px;
+    height: 286px;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transform-style: initial!important;
+    -moz-transform-style: initial!important;
+    transform-style: initial!important;
+}
+.bookImg:hover{
+    transform: rotateY(-20deg);
+    -moz-transform: rotateY(-20deg);
+    -ms-transform: rotateY(-20deg);
+    -webkit-transform: rotateY(-20deg);
+}

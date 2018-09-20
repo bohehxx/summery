@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bookpublish.css">
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+<div class="is-header">
+    <div class="logo"></div>
+    <ul class="nav">
+        <li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+        <li><a href="aboutus.html">走进安美</a></li>
+        <li><a class="active" href="news.html">资讯动态</a></li>
+        <li style="position:relative"><a>图书出版</a>
+            <ul class="drop-menu">
+                <div class="good"><a class="active" href="goodbook.html">精品图书</a></div>
+                <div><a href="newbook.html">新书推荐</a></div>
+
+            </ul>
+        </li>
+        <li><a>视频音频</a></li>
+        <li><a>作者风采</a></li>
+        <li><a>电子商城</a></li>
+        <li><a href="concatus.html">联系我们</a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="banner">
+        <img src="images/newsbanner.jpg" />
+
+    </div>
+    <div class="bookpublish clearfix">
+        <div class="sidebar fl">
+            <ul class="leftNav">
+                <li><a><img src="images/whiteline.png" />首页&nbsp;/Home</a></li>
+                <li><a>走进安美</a></li>
+                <li><a>资讯动态</a></li>
+                <li id="bookNav"><a class="active">图书出版</a>
+                <div class="two-level">
+                    <div>精品图书</div>
+                    <div>新书推荐</div>
+                </div>
+
+
+                </li>
+
+                <li><a>视频音频</a></li>
+                <li><a>作者风采</a></li>
+                <li><a>电子商城</a></li>
+                <li><a>联系我们</a></li>
+
+            </ul>
+        </div>
+        <div class="booklist fr">
+            <div class="newsHeader">
+                当前位置 > 首页 > <span class="column">图书出版</span>
+            </div>
+
+            <div class="tab">
+                <ul>
+                    <li class="active">社会热点</li>
+                    <li>历史普及</li>
+                    <li>中国史</li>
+                    <li>世界史</li>
+                    <li>史学理论</li>
+                </ul>
+
+            </div>
+            <div class="totalList">
+            <ul class="list clearfix" id="list1">
+                    <script id="lists1" type="text/html">
+                        {{each bookList1 as value i}}
+                        <li><div class="book-list"><img src="{{value.cover}}"><p class="book-name">
+                            {{value.name}}</p><p class="book-style">{{value.style}}</p></div>
+                        </li>
+                        {{/each}}
+                    </script>
+
+            </ul>
+
+
+
+            </div>
+            <div id="div1" class="pager">
+                <span name="prev" class="disabled" >上一页</span>
+
+                <span name="nav" >
+            <a class="navi">
+                <span style="color: #780502">1</span>
+            </a>
+        </span>
+
+                <span name="next" class="disabled" >下一页</span>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script src="js/artTemplate.js"></script>
+<script src="js/book.js"></script>
+</body>
+</html>

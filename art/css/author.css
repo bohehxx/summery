@@ -1,0 +1,31 @@
+.author{
+  width:100%;
+  margin-top:8px;
+}
+.authorList{
+  width:770px;
+
+}
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.authorUl{
+  padding:26px 20px;
+}
+.authorUl li{
+  width:230px;
+  margin-right:10px;
+  margin-bottom:15px;
+  display:inline-block;
+}
+.authorUl li img{
+  width:100%;
+}
+.authorUl li .name{
+  height:30px;
+  line-height:30px;
+  font-size:14px;
+  color:#333;
+  text-align:center;
+}

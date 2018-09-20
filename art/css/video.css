@@ -1,0 +1,30 @@
+.video{
+  width:100%;
+  margin-top:8px;
+}
+.videoList{
+  width:770px;
+  margin-top:8px;
+}
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.videoUl{
+  padding:24px 20px;
+}
+.videoUl li{
+  width:230px;
+  margin-right:10px;
+  margin-bottom:15px;
+  display:inline-block;
+}
+.videoUl li img{
+  width:100%;
+}
+.videoUl li .name{
+  line-height:20px;
+  font-size:14px;
+  color:#333;
+  text-align:center;
+}

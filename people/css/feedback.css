@@ -1,0 +1,134 @@
+.feedback{
+    width:1200px;
+    margin:0px auto;
+}
+.feedback h1{
+    font-size:24px;
+    color:#000;
+    margin:27px 0 34px 0;
+}
+.feedback textarea{
+    width:1200px;
+    height:365px;
+    border:1px solid #ccc;
+    padding:30px;
+}
+.feedback input{
+    width:1200px;
+    height:45px;
+    line-height:45px;
+    border:1px solid #ccc;
+    text-indent:28px;
+    margin-top:32px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #c4c4c4;
+    font-size:14px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #c4c4c4;
+    font-size:14px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #c4c4c4;
+    font-size:14px;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #c4c4c4;
+    font-size:14px;
+}
+.feedback .btn{
+    margin-top:40px;
+}
+.feedback .btn .send{
+    width:144px;
+    height:45px;
+    line-height:45px;
+    font-size:16px;
+    color:#fff;
+    text-align:center;
+    background:#ce2f21;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    margin-right:15px;
+    cursor:pointer;
+
+}
+.feedback .btn .cancel{
+    width:144px;
+    height:45px;
+    line-height:45px;
+    font-size:16px;
+    color:#ce2f21;
+    text-align:center;
+    background:#e2e2e2;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.feedback .btn .send:hover{
+    box-shadow: 0 4px 6px 0 rgba(33,47,206,.16);
+
+}
+.feedback .btn .cancel:hover{
+    box-shadow: 0 4px 6px 0 rgba(33,47,206,.16);
+}
+.feedback .verity{
+    display:none;
+    font-size:14px;
+    color:#fda233;
+}
+.feedback-mask{
+    display:none;
+    width:100%;
+    height:100%;
+    background:url("../images/bgmask.png") repeat center center;
+    position:fixed;
+    left:0;
+    top:0;
+
+}
+.feedback-dialog{
+    background:#fff;
+    width:510px;
+    height:305px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    margin-left:-255px;
+    position:absolute;
+    left:50%;
+    top:470px;
+
+}
+.feedback-dialog .close{
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    background:url("../images/close.png") no-repeat center center;
+    position:absolute;
+    right:15px;
+    top:15px;
+}
+.feedback-dialog .content{
+    text-align:center;
+}
+.feedback-dialog .content h1{
+    font-size:24px;
+    color:#333;
+    line-height:24px;
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+.feedback-dialog .content .p1{
+    font-size:22px;
+    color:#333;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.feedback-dialog .content .p2{
+    font-size:16px;
+    color:#666;
+}

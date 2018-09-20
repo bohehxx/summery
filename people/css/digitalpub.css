@@ -1,0 +1,12 @@
+.introduction .pic{
+    width:948px;
+    margin:35px auto;
+
+}
+.introduction p{
+    font-size:18px;
+    color:#333;
+    line-height:28px;
+    text-indent:2em;
+    margin-bottom:15px;
+}

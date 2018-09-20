@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/1.css">
+</head>
+<body>
+<form method="www.mukewang.com">
+    <div><label><span>会员名:</span><input type="text" class="text" /> </label>
+        <p class="msg"></p>
+    </div>
+    <div id="count"></div>
+    <div><label><span>登录密码:</span><input type="text" class="text" /> </label>
+        <p class="msg"> </p>
+    </div>
+    <div><label><span></span><em class="active">弱</em><em>中</em><em>强</em> </label></div>
+    <div><label><span>确认密码:</span><input type="text" disabled class="text" /> </label>
+        <p class="msg"></p>
+    </div>
+    <div><label><span>验证码：</span><input type="text">
+       <a class="changeImg" href="javascript;" title="重新获取验证码"></a>
+    </label><input type="button" id="btn" value="免费获取验证码"> </div>
+    <div><input class="submitBtn btn" type="submit" value="同意协议并注册" /></div>
+</form>
+<script>
+  function getLength(str){
+    return str.replace(/[^\x00-xff]/g,'XX').length;
+  }
+  function findStr(str,n){
+    var tmp = 0;
+    for(var i=0;i<str.length;i++){
+      if(str.charAt[i]==n){
+        tmp++
+      }
+    }
+    return tmp;
+  }
+window.onload = function(){
+    var aInput = document.getElementsByTagName('input');
+    var oName = aInput[0];
+    var pwd = aInput[1];
+    var repwd = aInput[2];
+    var aP= document.getElementsByTagName('p');
+    var nameMsg = aP[0];
+    var pwdMsg = aP[1];
+    var repwdMsg = aP[2];
+    var count = document.getElementById('count');
+    var nameLength = 0;
+    var aEm = document.getElementsByTagName('em');
+    var btn = document.getElementById('btn');
+    var countdown = 60;
+    oName.onfocus = function(){
+      nameMsg.style.display = 'inline-block';
+      nameMsg.innerHTML = '5-25个字符，一个汉字为两个字符，推荐使用中文会员名'
+    }
+    oName.onkeyup = function(){
+      nameLength = getLength(this.value);
+      count.innerHTML = nameLength+'个字符';
+      if(nameLength==0){
+        count.style.display = 'none';
+      }
+    }
+    oName.onblur = function(){
+      //含有非法字符
+      var re = /[^\w\u4e00-\u9fa5]/g;
+      if(re.test(this.value)){
+        nameMsg.innerHTML = ' <i class ="no"></i> 含有非法字符' ;
+      }
+
+    else if(this.value==''){
+    nameMsg.innerHTML = ' <i class ="no"></i> 不能为空' ;
+    }else if(this.value.length>25){
+        nameMsg.innerHTML = ' <i class ="no"></i> 用户名长度不能大于25个字符' ;
+      }  else if(nameLength <6){
+        nameMsg.innerHTML = ' <i class ="no"></i> 用户名长度不得少于6个字符' ;
+      }
+
+      //OK
+      else{
+        nameMsg.innerHTML = ' <i class ="ok"></i> 可以注册！' ;
+      }
+    }
+
+    pwd.onfocus = function(){
+      pwdMsg.style.display='block';
+      pwdMsg.innerHTML = '6-16个字符，请使用字母加数字加符号组成';
+    }
+    pwd.onkeyup = function(){
+      if(this.value.length>5){
+         aEm[1].className='active';
+         repwd.removeAttribute('disabled');
+      }else if(this.value.length>5 && this.value.length<10){
+        aEm[1].className='active';
+        aEm[2].className='';
+
+      }else if(this.value.length>10){
+        aEm[2].className='active';
+      }else{
+        aEm[0].className='active';
+        aEm[1].className='';
+        repwd.setAttribute("disabled","true");
+      }
+
+    }
+    pwd.onblur = function(){
+      console.log(this,'this111')
+      var m =findStr(this.value,this.value[0]);
+      var re_n = /[^\d]/g;
+      var re_t = /[^a-zA-Z]/g;
+      if(this.value==''){
+        pwdMsg.innerHTML = '<i class ="no"></i>密码长度不能为空';
+      }else if(this.value.length<6 || this.value.length>16){
+        pwdMsg.innerHTML = '<i class ="no"></i>密码长度为6到16个字符';
+      }else if(m==this.value.length){
+        pwdMsg.innerHTML = '<i class ="no"></i>不能使用相同字符';
+      }else if(!re_n.test(this.value)){
+        pwdMsg.innerHTML = '<i class ="no"></i>不能全是数字';
+      }else if(!re_t.test(this.value)){
+        pwdMsg.innerHTML = '<i class ="no"></i>不能全是字母';
+      }else{
+        pwdMsg.innerHTML = '<i class ="ok"></i>可以使用！';
+      }
+
+
+    }
+    btn.onclick = function() {
+      console.log(this, 'this');
+
+      if(countdown==0){
+        btn.value='免费获取短信验证码';
+        btn.removeAttribute('disabled');
+      }else{
+        btn.setAttribute('disabled','true');
+        btn.value='重新发送'+countdown;
+        countdown--;
+      }
+      setTimeout(btn.onclick,1000)
+
+    }
+
+
+}
+
+</script>
+</body>
+</html>

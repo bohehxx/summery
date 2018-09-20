@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="myLinks">
+    <li id="goSomewhere">Go somewhere</li>
+    <li id="doSomething">Do something</li>
+    <li id="sayHi">Say hi</li>
+</ul>
+<script>
+  var EventUtil = {
+    addHandler:function(element,type,handler){
+      if(element.addEventListener){
+        element.addEventListener(type,handler,false);
+      }else if(element.attachEvent){
+        element.attachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = handler;
+      }
+    },
+    removeHandler:function(element,type,handler){
+      if(element.removeEventListener){
+        element.removeEventListener(type,handler,false);
+      }else if(element.detachEvent){
+        element.detachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = null;
+      }
+    }
+
+  }
+  var item1 = document.getElementById("goSomewhere");
+  var item2 = document.getElementById("doSomething");
+  var item3 = document.getElementById("sayHi");
+  EventUtil.addHandler(item1,"click",function(){
+    location.href="http://www.wrox.com";
+  })
+  EventUtil.addHandler(item2,"click",function(){
+    document.title = "I changed the document's title"
+  })
+  EventUtil.addHandler(item3,"click",function(){
+    alert("hi");
+  })
+    var list = document.getElementById("myLinks");
+    EventUtil.addHandler(list,"click",function(){
+      event = Event.getEvent(event);
+      var target = EventUtil.getTarget(event);
+      switch(target.id){
+        case "doSomething":
+          document.title = "I changed the document's title";
+          break;
+        case "goSomeWhere":
+          location.href = "http://www.wrox.com";
+          break;
+        case "sayHi":
+          alert("hi");
+          break;
+      }
+    })
+</script>
+</body>
+</html>

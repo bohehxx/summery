@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="myBtn">
+    222222
+</div>
+
+<input type="button" value="clicke Me" onclick="alert('clicked')" />
+<input type="button" value="clicke Me" onclick="alert(&quot;clicked&quot;)" />
+<script>
+//    var btn = document.getElementById("myBtn");
+//    btn.onclick = function(){
+//      alert("clicked");
+//    }
+    var btn = document.getElementById("myBtn");
+    btn.addEventListener("click",function(){
+      alert(this.id);
+    },false)
+</script>
+
+</body>
+</html>

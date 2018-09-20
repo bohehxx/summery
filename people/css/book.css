@@ -1,0 +1,9 @@
+.jpts img{
+    display:inline-block;
+    width:230px;
+    height:334px;
+    float:left;
+    margin:35px 26px 35px 0;
+    border-radius:10px;
+
+}

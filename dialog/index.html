@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <link type="text/css" rel="stylesheet" href="css/window.css" />
+</head>
+<body>
+<a href="#" class="btn">弹窗</a>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/window.js"></script>
+<script>
+    $(".btn").click(function(){
+        var win = new Window();
+        win.alert({
+            width:500,
+            height:150,
+            y:200,
+            hasCloseBtn:true,
+            title:"提示",
+            content:"内容",
+            text4Alertbtn:"ok",
+            handler4AlertBtn:function(){
+                alert("你点击了确定按钮1")
+            },
+            handler4CloseBtn:function(){
+                alert('你点击了关闭按钮1');
+            },
+
+        }).on('alert',function(){alert('你点击了确定按钮')}).on('alert',function(){
+            alert('确定按钮第二次回调')
+        }).on('alert',function(){
+            alert('确定按钮第三次回调')
+        }).on('close',function(){alert('第一次点击了关闭按钮')}).on(function(){
+            alert('关闭按钮第二次回调')
+        });
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            border: 20px solid #000;
+            margin: 10px;
+            padding: 40px;
+            background: #eee;
+            height: 350px;
+            width: 500px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var pageWidth = window.innerWidth,
+        pageHeight = window.innerHeight;
+        width = window.outerWidth;
+        height = window.outerHeight;
+//    if(typeof pageWidth != "number"){
+//      if(document.compatMode == "css1Compat"){
+//        pageWidth = document.documentElement.clientWidth;
+//        pageHeight = document.documentElement.clientHeight;
+//      }else{
+//        pageWidth = document.body.clientWidth;
+//        pageHeight = document.body.clientHeight;
+//      }
+//    }
+    console.log(pageWidth,pageHeight);
+    console.log(width,height);
+    console.log(screen.width,screen.height);
+    console.log(screen.availWidth,screen.availHeight);
+    console.log(document.body.clientLeft,document.body.clientTop);
+    console.log(document.body.offsetLeft,document.body.offsetTop);
+</script>
+
+</body>
+</html>

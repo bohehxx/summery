@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding:0;
+}
+.msg{
+  display:inline-block;
+}
+.no{
+  background-image:url(../images/no.jpg);
+  width:16px;
+  height:21px;
+  display:inline-block;
+}
+em{
+  display:inline-block;
+  font-size:12px;
+  text-align:center;
+  color:#fff;
+  vertical-align:middle;
+  font-style:normal;
+  width:53px;
+  height:15px;
+  line-height:15px;
+  background:#FFD099;
+}
+.active{
+  background-color:#FF6600;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;
+          padding:0;}
+        .wrap{
+            padding:10px;
+            border:1px solid #ccc;
+            width:500px;
+            margin:20px auto;
+        }
+        .roll-wrap{
+            height:20px;
+            overflow:hidden;
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="roll-wrap" id="roll-wrap">
+        <ul>
+            <li>JS文本向上滚动1</li>
+            <li>JS文本向上滚动2</li>
+            <li>JS文本向上滚动3</li>
+            <li>JS文本向上滚动4</li>
+            <li>JS文本向上滚动5</li>
+            <li>JS文本向上滚动6</li>
+            <li>JS文本向上滚动7</li>
+        </ul>
+    </div>
+</div>
+<script>
+    function scrollText(){
+        var controls = {},
+             value = {},
+             t1 = 200,
+             t2 = 2000,
+             si;
+             controls.rollWrap = $("#roll-wrap");
+             controls.rollWrapUl = controls.rollWrap.children();
+             controls.rollWrapLis = controls.rollWrapUl.children();
+             value.liNums = controls.rollWrapLis.length;
+             value.liHeight = controls.rollWrapLis.eq(0).height();
+             value.ulHeight = controls.rollWrap.height();
+             this.init = function(){
+                 autoPlay();
+                 pausePlay()
+             }
+        function play(){
+            controls.rollWrapUl.animate({"margin-top":"-"+value.liHeight},t1,function(){
+                $(this).css({"margin-top":"0"}).children().eq(0).appendTo($(this));
+
+            })
+        }
+        function autoPlay(){
+            if(value.liHeight*value.liNums>value.ulHeight){
+                si = setInterval(function(){
+                    play()
+                },t2)
+            }
+        }
+        function pausePlay(){
+            controls.rollWrapUl.on({
+                "mouseenter":function(){
+                    clearInterval(si)
+                },
+                "mouseleave":function(){
+                    autoPlay()
+                }
+            })
+        }
+
+    }
+    new scrollText().init();
+</script>
+</body>
+</html>

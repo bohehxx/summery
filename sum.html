@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+/*移动端无限加载分页*/
+$(window).scroll(function(){
+//已经滚动到上面的页面的高度
+  var scrollTop = $(this).scrollTop();
+//  页面高度
+  var scrollHeight = $(document).height();
+//  浏览器窗口高度
+  var windowHeight = $(this).height();
+  //此处是滚动条到底部时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作
+  if (scrollTop + windowHeight == scrollHeight) {
+
+  }
+})
+
+/*授权*/
+  if(!uid){
+    var activityId = baseData.id;
+    var ua = navigator.userAgent;
+    var type = 2; //默认微博
+    if (ua.indexOf('MicroMessenger') > -1) {
+      type = 0; //微信
+    }
+    if (ua.indexOf('QQ/') > -1) {
+      type = 1; //QQ
+    }
+    var urlParam = '?activityId='+activityId+'&type='+type+'&url='+encodeURIComponent(location.href);
+    var redUrl = localUrl+'/chd/common/auth'+urlParam;
+    browserRediret(redUrl,type);
+  };
+//授权判断
+  function browserRediret(url,type) {
+    var appId = '';
+    var linkUrl = encodeURIComponent(url);
+
+    if (type == 0) {
+      appId = social.wxId;
+      location = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+appId+'&redirect_uri='+linkUrl+'&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect'
+    } else if (type == 1) {
+      appId = social.qqId;
+      location = 'https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=' + appId + '&redirect_uri=' + linkUrl + '%26type%3D1&scope=1'
+    } else {
+      appId = social.weiBoId;
+      location = 'https://api.weibo.com/oauth2/authorize?client_id=' + appId + '&response_type=code&redirect_uri=' + linkUrl + '%26type%3D2#'
+    }
+}
+
+
+/*微信分享*/
+var urlData = {
+  url : location.href.split('#')[0]
+}
+var shareObj = {
+  title:'时光流影',
+  desc: '一个分秒成书的神奇网站',
+  link: jumpHost,
+  imgUrl: jumpHost + '/game/indexRevision/images/logo.png'
+}
+$.ajax({
+  url: '/hd/common/signature',
+  type: "POST",
+  data: urlData,
+  success: function (res) {
+    if (res.data) {
+      if (wx) {
+        var wxConfig = res.data;
+        wxConfig.debug = false;
+        wxConfig.jsApiList = ['onMenuShareAppMessage','onMenuShareTimeline','onMenuShareQQ','onMenuShareWeibo', 'onMenuShareQZone','hideMenuItems'];
+        wx.config(wxConfig);
+        wx.ready(function(){
+          wx.onMenuShareTimeline(shareObj);
+          wx.onMenuShareAppMessage(shareObj);
+          wx.onMenuShareQQ(shareObj);
+          wx.onMenuShareWeibo(shareObj);
+          wx.onMenuShareQZone(shareObj);
+        });
+      }
+    }
+  },
+  error: function (qXHR,textStatus,errorThrown){
+  }
+});
+//微信引用地址
+var wxjsdk='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'
+
+//获取参数值
+function getQueryString(name) {
+  // var param = getQueryString(param) 即可获取到参数值
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]);
+  return '';
+}
+
+</script>
+</body>
+</html>

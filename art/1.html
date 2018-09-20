@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery1.42.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/artTemplate.js"></script>
+  
+    
+</head>
+<body>
+<div id="art32">
+<!--<div id="content">-->
+<!--<script id="test" type="text/html">-->
+    <!--<h1>{{title}}</h1>-->
+    <!--<ul>-->
+        <!--{{each list as value i}}-->
+        <!--<li>索引 {{i + 1}} ：{{value}}</li>-->
+        <!--{{/each}}-->
+    <!--</ul>-->
+<!--</script>-->
+<!--</div>-->
+<!--<div id="content2">-->
+
+    <!--<-->
+
+<!--</div>-->
+
+<script id="art3" type="text/html">
+    {{each list}}
+    <div>
+        <h2>{{$value.title}}</h2>
+        {{include 'art4' $value.tags}}
+    </div>
+    {{/each}}
+</script>
+<script id="art4" type="text/html">
+    <ul>
+        {{each x}}
+        <li>{{$value.tags}}</li>
+        {{/each}}
+    </ul>
+</script>
+</div>
+<!--<script id="test2" type="text/html">-->
+    <!--<h1>{{title}}</h1>-->
+    <!--<ul>-->
+        <!--{{each list2 as value i}}-->
+        <!--<li>索引 {{i + 1}} ：{{value.img}}：{{value.text}}</li>-->
+        <!--{{/each}}-->
+    <!--</ul>-->
+<!--</script>-->
+
+<script>
+//  var data = {
+//    title: '标签',
+//    list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他'],
+//    list2: [{"img":1,"text":"22"},{"img":2,"text":"33"}],
+//  };
+//  var html = template('test', data);
+//  document.getElementById('content').innerHTML = html;
+//  var html = template('test2', data);
+//  document.getElementById('content2').innerHTML = html;
+  var data3 = {
+    list : [{
+      title :'周一',
+      tags : {
+        x:[{"tags":'英语'}, {
+          "tags":'语文'}, {
+          "tags":'数学'}, {
+          "tags":'政治'}
+        ]}
+    },{
+      title : '周二',
+//      tags :{
+//        x:[{"tags":'地理'}, {
+//          "tags":'体育'}, {
+//          "tags":'英语'}, {
+//          "tags":'历史'}]
+//      }
+    },
+      {
+        title :'周一',
+        tags : {
+          x:[{"tags":'英语'}, {
+            "tags":'语文'}, {
+            "tags":'数学'}, {
+            "tags":'政治'}
+          ]}
+      },{
+        title : '周二',
+        tags :{
+          x:[{"tags":'地理'}, {
+            "tags":'体育'}, {
+            "tags":'英语'}, {
+            "tags":'历史'}]
+        }
+      }]
+
+  };
+  var html = template('art3', data3);
+  document.getElementById('art32').innerHTML = html;
+</script>
+
+</body>
+</html>

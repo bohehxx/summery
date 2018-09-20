@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="node">
+    <p>fffffffffff</p>
+    <p>aaaaaae</p>
+
+</div>
+<script>
+    var someNode = document.getElementById("node");
+    if(someNode.nodeType == Node.ELEMENT_NODE){
+      alert("Node is an element");
+    }
+    var firstChild = someNode.childNodes[0];
+    var secondChild = someNode.childNodes.item[1];
+    var count = someNode.childNodes.length;
+</script>
+</body>
+</html>

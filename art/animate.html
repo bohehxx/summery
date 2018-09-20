@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bookLink {
+            -webkit-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+            -moz-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+            box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+            display: block;
+            width: 197px;
+            height: 270px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            position: relative;
+            padding-top: 0;
+            background-color: #656566;
+            -webkit-perspective: 1200px;
+            -moz-perspective: 1200px;
+            -ms-perspective: 1200px;
+            perspective: 1200px;
+            background: 0 0;
+        }
+        .bookLink:hover{
+             _zoom: 1;
+         }
+        .bookImg{
+            transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+            transition: transform .5s ease 0s;
+            -moz-transition: -moz-transform .5s ease 0s;
+            -ms-transition: -ms-transform .5s ease 0s;
+            -webkit-transition: -webkit-transform .5s ease 0s;
+            -webkit-animation: ffk-animate 1s 1;
+            -moz-animation: ffk-animate 1s 1;
+            -ms-animation: ffk-animate 1s 1;
+            animation: ffk-animate 1s 1;
+            position: relative;
+            width: 197px;
+            height: 270px;
+            background-color: #fff;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-transform-style: initial!important;
+            -moz-transform-style: initial!important;
+            transform-style: initial!important;
+        }
+        .bookImg:hover{
+            transform: rotateY(-20deg);
+            -moz-transform: rotateY(-20deg);
+            -ms-transform: rotateY(-20deg);
+            -webkit-transform: rotateY(-20deg);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="bookBox">
+    <a class="bookLink">
+    <div class="tuijian_ico bookidmian_ico"></div>
+<div class="book_cemian"></div>
+<div class="bookImg">
+    <img src="http://img1.timeface.cn/times/7e3ae36763d4cb436e92b89856df2cd2.jpg@!v176" class="bookImg"/>
+</div>
+</a>
+</div>
+
+</body>
+</html>

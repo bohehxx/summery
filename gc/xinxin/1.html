@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #dropTarget {width: 200px; height: 200px; background: #ccc; border: 1px solid #999;}
+    </style>
+</head>
+<body>
+<p>请把文件拖到下面的框里：</p>
+<div id="dropTarget"></div>
+<div id="output"></div>
+<script type="text/javascript">
+  function dragHandle(event) {
+    var info = "",
+      outputEle = document.getElementById("output"),
+      files, i, len;
+    event.preventDefault();
+    if(event.type == "drop") {
+      files = event.dataTransfer.files;
+      i = 0;
+      len = files.length;
+      while(i < len) {
+        info += files[i].name + "( " + files[i].type + ", " + files[i].size + " bytes) <br>";
+        i++;
+      }
+      outputEle.innerHTML = info;
+    }
+  }
+  var dropTargetEle = document.getElementById("dropTarget");
+  dropTargetEle.addEventListener("dragenter", dragHandle, false);
+  dropTargetEle.addEventListener("dragover", dragHandle, false);
+  dropTargetEle.addEventListener("drop", dragHandle, false);
+</script>
+</body>
+</html>

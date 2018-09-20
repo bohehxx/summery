@@ -1,0 +1,199 @@
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.banner{ width:100%; height:397px; overflow:hidden; position:relative; }
+.banner .hd{ height:10px; overflow:hidden; position:absolute; right:495px; bottom:5px; z-index:1; }
+.banner .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.banner .hd ul li{ float:left; margin-right:7px;  width:10px; height:10px; line-height:10px; text-align:center; background:#afb3be; cursor:pointer;border-radius:50%; }
+.banner .hd ul li.on{ background:#f00; color:#afb3be; }
+.banner .bd{ position:relative; height:100%; z-index:0;   }
+.banner .bd li{ zoom:1; vertical-align:middle; }
+.banner .bd img{ width:100%; height:397px; display:block;  }
+.banner .prev,
+.banner .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/arrow1.png) no-repeat center center;    }
+.banner .next{ left:auto; right:3%; background:url(../images/arrow2.png) no-repeat center center; }
+.banner .prev:hover{ background:url(../images/arrow3.png) no-repeat center center;}
+.banner .next:hover{ background:url(../images/arrow4.png) no-repeat center center; }
+.banner .prevStop{ display:none;  }
+.banner .nextStop{ display:none;  }
+.event{width:100%;margin-top:10px;}
+.pic{ width:509px;; height:283px;overflow:hidden; position:relative; border:1px solid #dbdbdb; border-left:none;}
+.pic .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.pic .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.pic .hd ul li{ float:left; margin-right:10px;  width:10px; height:10px; line-height:9px; text-align:center; background:#fff; cursor:pointer;border-radius:50%; }
+.pic .hd ul li.on{ background:#ccc; color:#fff; }
+.pic .bd{ position:relative; height:100%; z-index:0;}
+.pic .bd li{ zoom:1; vertical-align:middle; }
+.pic .bd img{ width:100%; height:283px; display:block; position:absolute;transition:.5s;}
+.pic .bd img:hover{cursor:pointer; transform:scale(1.1);}
+.pic .bd .txt{position:absolute;z-index:999;background:rgba(0,0,0,0.7);width:509px;height:30px;padding-left:20px;bottom:0;line-height:30px;font-size:14px;color:#fff;}
+.text{ width:480px; height:283px;box-sizing:border-box;border:1px solid #ddd; text-align:left;  }
+.text .hd{ background:url("../images/tit-bg.png") repeat center center;height:28px; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.text .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:30px;   }
+.text .hd ul li{ float:left;margin-right:2px;width:110px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#09567c;background:url("../images/tit-normal.png") no-repeat center center; cursor:pointer;  }
+.text .hd ul li.on{ height:30px;  background:url("../images/tit-active.png") no-repeat center center;color:#fff; }
+.text .bd ul{ padding:15px;  zoom:1;  }
+.text .bd ul a{cursor:pointer;}
+.text .bd li{ height:30px; line-height:30px; }
+.text .bd li .date{ display:inline-block;float:right; color:#8f8f8f;  }
+.text .bd li .news{display:inline-block;float: left;width: 320px;overflow: hidden;height: 30px;}
+.text .bd li .spot{color: #f67824;margin-right: 5px;}
+.text .more{position:absolute; right:10px; top:0; line-height:30px;cursor:pointer;color:#333;font-size:12px;}
+.banner2{width:100%;height:137px;margin-top:10px;margin-bottom:10px;cursor:pointer;position:relative;}
+.banner2 .mask{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: -1000px 0;
+  background-image: linear-gradient(135deg,rgba(255,255,255,0) 0,rgba(255,255,255,.8) 40%, rgba(255,255,255,.8) 60%, rgba(255,255,255,0) 100%);
+}
+.banner2:hover .mask{
+  transition:.6s;
+  background-position: 1000px 0;
+}
+.books{width:998px;height:390px;border:1px solid #dbdbdb;position:relative;overflow:hidden;}
+.books .hd{ margin-bottom:30px;background:url("../images/tit-bg.png") repeat center center;height:28px; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.books .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:30px;   }
+.books .hd ul li{ float:left;margin-right:2px;width:110px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#09567c;background:url("../images/tit-normal.png") no-repeat center center; cursor:pointer;  }
+.books .hd ul li.on { height:30px;  background:url("../images/tit-active.png") no-repeat center center;color:#fff; }
+.books .more{position:absolute; right:0px; top:0; line-height:30px;cursor:pointer;color:#333;font-size:12px;}
+.books .bd{ position:relative; height:100%; z-index:0;   }
+.books .bd ul li{float:left; _display:inline; overflow:hidden; text-align:center; margin:0 8px; }
+.books .bd ul li img{
+  transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transition: transform .5s ease 0s;
+  -moz-transition: -moz-transform .5s ease 0s;
+  -ms-transition: -ms-transform .5s ease 0s;
+  -webkit-transition: -webkit-transform .5s ease 0s;
+  -webkit-animation: ffk-animate 1s 1;
+  -moz-animation: ffk-animate 1s 1;
+  -ms-animation: ffk-animate 1s 1;
+  animation: ffk-animate 1s 1;
+  position: relative;
+  width: 148px;
+  height: 207px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transform-style: initial!important;
+  -moz-transform-style: initial!important;
+  transform-style: initial!important;
+}
+.books .bd ul li img:hover{
+  transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);
+  -ms-transform: rotateY(-20deg);
+  -webkit-transform: rotateY(-20deg);
+}
+.books .prev,
+.books .next{ position:absolute; left:-35px; top:45%; margin-top:-25px; display:block; width:32px; height:40px; background:url("../images/arrowBookLeft.png") no-repeat; filter:alpha(opacity=100);opacity:1;   }
+.books .next{ left:auto; right:-55px; background:url("../images/arrowBookRight.png") no-repeat; }
+.books .prev:hover,
+.books .next:hover{ filter:alpha(opacity=50);opacity:0.5;  }
+.books .prevStop{ display:none;  }
+.books .nextStop{ display:none;  }
+.books .book1-list{width:161px;}
+.books .bd ul li img{cursor:pointer;}
+.books .book1-list .book-name{font-size:16px;color:#000;margin:10px auto;text-align:center;}
+.books .book1-list .book-prize{font-size:14px;color:#666;text-align:center;line-height:22px;}
+.banner3{ width:100%;height:137px; margin-top:10px;margin-bottom:10px;position:relative;}
+.banner3 img{width:100%;}
+.banner3 .mask{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: -1000px 0;
+  background-image: linear-gradient(135deg,rgba(255,255,255,0) 0,rgba(255,255,255,.8) 40%, rgba(255,255,255,.8) 60%, rgba(255,255,255,0) 100%);
+}
+.banner3:hover .mask{
+  transition:.6s;
+  background-position: 1000px 0;
+}
+.banner4{width:100%;height:113px;margin:10px auto;position:relative;}
+.banner4 .img1{position:absolute;left:0px;}
+.banner4 .img2{position:absolute;right:0px;}
+.read{width:998px;height:390px;border:1px solid #dbdbdb;position:relative;overflow:hidden;}
+.read .hd{ margin-bottom:30px;background:url("../images/tit-bg.png") repeat center center;height:28px; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.read .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:30px;   }
+.read .hd ul li{ float:left;margin-right:2px;width:110px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#09567c;background:url("../images/tit-normal.png") no-repeat center center; cursor:pointer;  }
+.read .hd ul li.on { height:30px;  background:url("../images/tit-active.png") no-repeat center center;color:#fff; }
+.read .more{position:absolute; right:0px; top:0; line-height:30px;cursor:pointer;color:#333;font-size:12px;}
+.read .bd{ position:relative; height:100%; z-index:0;   }
+.read .bd ul li{  float:left; _display:inline; overflow:hidden; text-align:center;  margin:0 8px;}
+.read .bd ul li img{width:148px;height:207px;}
+.read .prev,
+.read .next{ position:absolute; left:-35px; top:45%; margin-top:-25px; display:block; width:32px; height:40px; background:url("../images/arrowBookLeft.png") no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+.read .next{ left:auto; right:-55px; background:url("../images/arrowBookRight.png") no-repeat; }
+.read .prev:hover,
+.read .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+.read .prevStop{ display:none;  }
+.read .nextStop{ display:none;  }
+.read .book1-list{width:161px;}
+.read .bd ul li img{cursor:pointer;}
+.read .book1-list .book-name{font-size:16px;color:#000;margin:10px auto;text-align:center;}
+.read .book1-list .book-prize{font-size:14px;color:#666;text-align:center;line-height:22px;}
+.bookLink {
+  -webkit-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  -moz-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  display: block;
+  width: 148px;
+  height: 207px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 0;
+  background-color: #656566;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px;
+  background: 0 0;
+}
+.bookLink:hover{
+  _zoom: 1;
+}
+.bookImg{
+  transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transition: transform .5s ease 0s;
+  -moz-transition: -moz-transform .5s ease 0s;
+  -ms-transition: -ms-transform .5s ease 0s;
+  -webkit-transition: -webkit-transform .5s ease 0s;
+  -webkit-animation: ffk-animate 1s 1;
+  -moz-animation: ffk-animate 1s 1;
+  -ms-animation: ffk-animate 1s 1;
+  animation: ffk-animate 1s 1;
+  position: relative;
+  width: 148px;
+  height: 207px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transform-style: initial!important;
+  -moz-transform-style: initial!important;
+  transform-style: initial!important;
+}
+.bookImg:hover{
+  transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);
+  -ms-transform: rotateY(-20deg);
+  -webkit-transform: rotateY(-20deg);
+}
+/*#ulParent ul{*/
+  /*z-index:0;*/
+  /*opacity:0;*/
+  /*filter:alpha(opacity=0);*/
+/*}*/

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="web-ie-compatible/es5-shim.min.js"></script>
+    <script src="web-ie-compatible/es5-sham.min.js"></script>
+    <script src="web-ie-compatible/json3.min.js"></script>
+</head>
+<body>
+<div class="header clearfix">
+    <div class="logo fl">
+    <img src="images/logo.jpg" />
+    </div>
+    <div class="header-nav fl">
+        <ul class="clearfix">
+            <li class="active"><a href="index.html">首页</a></li>
+            <li style="position:relative;">
+                <a href="aboutus.html?tab=0">关于我们</a>
+                <div class="drop-menu">
+                   <div><a href="aboutus.html?tab=0">公司简介</a></div>
+                    <div><a href="aboutus.html?tab=1">组织架构</a></div>
+                    <div><a href="aboutus.html?tab=2">企业荣誉</a></div>
+                    <div><a href="aboutus.html?tab=3">联系我们</a></div>
+
+                </div>
+
+            </li>
+            <li style="position:relative;"><a href="news.html?tab=0">新闻中心</a>
+                <div class="drop-menu">
+                    <div><a href="news.html?tab=0">公司动态</a></div>
+                    <div><a href="news.html?tab=1">媒体报道</a></div>
+                    <div><a href="news.html?tab=2">本社动态</a></div>
+                    <div><a href="news.html?tab=3">通知公告</a></div>
+
+                </div>
+
+            </li>
+            <li style="position:relative;"><a href="party.html?tab=0">党建之窗</a>
+                <div class="drop-menu">
+                    <div><a href="party.html?tab=0">党建动态</a></div>
+                    <div><a href="party.html?tab=1">组织生活</a></div>
+                    <div><a href="party.html?tab=2">学习教育</a></div>
+
+
+                </div>
+            </li>
+            <li style="position:relative;"><a href="book.html?tab=0">精品图书</a>
+                <div class="drop-menu">
+                    <div><a href="book.html?tab=0">精品书籍</a></div>
+                    <div><a href="book.html?tab=1">新品上架</a></div>
+                    <div><a href="book.html?tab=2">畅销书籍</a></div>
+                    <div><a href="book.html?tab=3">书单目录</a></div>
+
+                </div>
+            </li>
+
+                <li><a href="digitalpub.html">数字出版 </a></li>
+
+
+                <li><a href="http://www.apgbook.com/" target="_blank">电子书试读</a></li>
+
+        </ul>
+
+    </div>
+    <!--<div class="menu fl">-->
+        <!--<img src="images/menu.jpg" />-->
+
+    <!--</div>-->
+    <div class="search fl">
+        <img src="images/search.jpg" id="search"/>
+        <div class="search-dialog">
+         <input type="text" id="searchName" placeholder="请输入搜索名称" />
+            <img src="images/search.jpg" id="searchImg"/>
+        </div>
+
+    </div>
+
+</div>
+<div class="banner">
+    <div class="hd">
+        <ul id="hdul">
+            <script id="hdul2" type="text/html">
+                {{each bannerList as value i}}
+                <li></li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+    <div class="bd">
+
+        <ul id="bannerUl">
+            <script id="bannerUl2" type="text/html">
+                {{each bannerList as value i}}
+                <!--<li style="background:url('{{value}}')"></li>-->
+                <li><img src="{{value}}"></li>
+                {{/each}}
+            </script>
+
+        </ul>
+
+    </div>
+
+
+</div>
+<div class="news">
+    <div class="title">新闻中心</div>
+    <div class="news-tab">
+        <ul class="clearfix">
+            <li class="active">公司动态</li>
+            <li>媒体报道</li>
+            <li>本社动态</li>
+            <li>通知公告</li>
+        </ul>
+    </div>
+    <div class="news-detail clearfix">
+        <div class="pic fl">
+            <div class="hd">
+                <ul id="pichdul1">
+                    <script id="pichdul2" type="text/html">
+                        {{each picList as value i}}
+                        <li></li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul id="picUl">
+                    <script id="picUl2" type="text/html">
+                        {{each picList as value i}}
+                        <li><img src="{{value}}"></li>
+                        {{/each}}
+                    </script>
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="news-list fr">
+            <ul id="newsList">
+                <script id="newsList2" type="text/html">
+                {{each newsList as value i}}
+                <li>
+                    <div class="news-date fl">
+
+                        <p class="md">{{value.date}}</p>
+                        <p class="year">{{value.year}}</p>
+
+
+                    </div>
+                    <div class="news-body fr">
+
+                        <p class="news-title">{{value.title}}</p>
+                        <p class="description">{{value.desc}}</p>
+
+                    </div>
+
+                </li>
+                {{/each}}
+                </script>
+
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+<div class="excellect-book">
+    <div class="etitle">精品图书</div>
+    <div class="picScroll-left scroll1">
+        <div class="bd">
+            <ul class="picList" id="goodBook">
+                <script id="goodBook2" type="text/html">
+               {{each bookList as value i}}
+                <li>
+
+                    <div class="pic">
+                        <a >
+
+
+
+                                <img src="{{value}}" />
+                        </a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mask">
+                        <div class="title">潜意识读人心</div>
+                        <div class="desc">不管我们是否意识到身体的运动，我们通常是通过模糊且经常被忽视的手势来表达自己......</div>
+
+
+                    </div>
+
+                </li>
+                {{/each}}
+                </script>
+            </ul>
+
+        </div>
+        <div class="hd">
+            <ul></ul>
+
+        </div>
+    </div>
+
+</div>
+<div class="party clearfix">
+    <div class="ptitle">党建之窗</div>
+    <div class="info fl">
+        <p class="md">05-21</p>
+        <p class="year">2018</p>
+        <!--<div><img src="images/line.png" /></div>-->
+        <div class="line"></div>
+        <h1>学习党的历史 坚定理想信念</h1>
+        <p class="description">3月30日下午，按照集团暨公司党委统一部署，安徽省中共党史学会秘书长、中共安徽省委党史研究室宣教处处长朱贵平
+            应邀来到安徽美术出体党员及群众代表参加了党课学习。</p>
+        <div class="more">
+            查看更多
+        </div>
+
+
+    </div>
+    <div class="pic2 fr">
+        <div class="hd">
+            <ul id="pic2hdul1">
+                <script id="pic2hdul2" type="text/html">
+                    {{each picList as value i}}
+                    <li></li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul id="pic2Ul">
+                <script id="pic2Ul2" type="text/html">
+                    {{each picList as value i}}
+                    <li><img src="{{value}}"></li>
+                    {{/each}}
+                </script>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    </div>
+<div class="banner2">
+    <img src="images/banner2.jpg" />
+    <span class="mask"></span>
+</div>
+<div class="ebook">
+    <div class="etitle">电子书试读</div>
+    <div class="picScroll-left scroll1">
+        <div class="bd">
+            <ul class="picList" id="ebook1">
+                <script id="ebook2" type="text/html">
+                    {{each bookList as value i}}
+                    <li>
+                        <div class="pic">
+                            <a >
+
+                                <!--<div class="book_cemian"></div>-->
+                                <!--<div class="bookImg">-->
+
+
+                                    <img src="{{value}}" />
+                                <!--</div>-->
+                            </a>
+
+                        </div>
+                        <div class="mask">
+
+                        </div>
+
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+
+        </div>
+        <div class="hd">
+            <ul></ul>
+
+        </div>
+    </div>
+
+</div>
+<div class="aboutus">
+    <h1>关于我们</h1>
+    <p class="description">
+        于1952年9月成立，原为综合性出版社，1970年5月，成立了安徽省出版发行局、同时撤消了安徽人民出版社。1978年12月又恢复了安徽人民出版社，
+        与安徽人民政府出版事业管理局合署办公，实行合一体制。1984年11月改为以社会科学类图书为主的专业出版社;1991年，安徽出版总社制定"八五"期
+        间图书出版计划。多年来恪守服务读者、繁荣学术、弘扬民族文化的出版理念，
+        编辑出版了一批高质量的社会科学、人文科学方面的学术著作和高品位的通俗文化读物。
+    </p>
+
+</div>
+<div class="footer">
+    <div class="content">
+        <div class="nav">
+            <ul class="clearfix">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="aboutus.html"> 关于我们</a></li>
+                <li><a href="news.html">新闻中心</a></li>
+                <li><a href="party.html">党建之窗</a></li>
+                <li><a href="book.html">精品图书</a></li>
+                <li><a href="digitalpub.html">数字出版</a></li>
+                <li><a href="http://www.apgbook.com/" target="_blank">电子书试读</a></li>
+            </ul>
+
+        </div>
+        <div class="code clearfix">
+            <div>
+                <img src="images/code.png">
+                <p>安徽人民出版社京东商城</p>
+
+            </div>
+            <div>
+                <img src="images/code.png">
+                <p>安徽人民出版社官方微博</p>
+            </div>
+            <div>
+                <img src="images/code.png">
+                <p>安徽人民出版社官方微信</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="company">
+        安徽人民出版社 版权所有 皖ICP备09005048号  技术支持：时代数媒科技股份有限公司
+    </div>
+
+</div>
+<div class="back_to_top">
+        <img src="images/returntop.jpg" />
+
+
+
+
+</div>
+<a href="feedback.html">
+<div class="advice">
+
+</div>
+</a>
+<script src="js/jquery1.42.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/artTemplate.js"></script>
+<script src="js/index.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

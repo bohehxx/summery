@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <style type="text/css">
+        html {
+            background:red;
+        }
+        body {
+            background:green;
+        }
+        #null {
+            height:1000px;
+        }
+        #btn {
+            cursor:default;
+            background:blue;
+            width:50px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div id='null'>空白区</div>
+<div id="btn">点击</div><!-- 按钮用DIV是因为原生按钮有圆角，不确定边界 -->
+</body>
+<script type="text/javascript">
+  window.onload = function(){
+    var btn = document.getElementById('btn');
+    btn.onclick = function(e){
+      e = e|| window.event;
+      var box = (e.target || e.srcElement).getBoundingClientRect(),
+        offsetX = e.clientX - box.left,
+        offsetY = e.clientY - box.top;
+      p('x: '+ e.x+', y: '+e.y);
+      p('pageX: '+ e.pageX+', pageY: '+e.pageY);
+      p('offsetX: '+ e.offsetX+', offsetY: '+e.offsetY);
+      p('FF实现 offsetX: '+offsetX+', offsetY: '+offsetY);
+      p('layerX: '+ e.layerX+', layerY: '+e.layerY);
+      p('clientX: '+ e.clientX+', clientY: '+e.clientY);
+      p('body.scrollLeft: '+ document.body.scrollLeft+', body.scrollTop: '+document.body.scrollTop);
+      p('body.clientLeft: ' + document.body.clientLeft + ', body.clientTop: '+document.body.clientTop);
+      p('documentElement.scrollLeft: '+ document.documentElement.scrollLeft+', documentElement.scrollTop: '+document.documentElement.scrollTop);
+      p('documentElement.clientLeft: ' + document.documentElement.clientLeft + ', documentElement.clientTop: '+document.documentElement.clientTop);
+    }
+  }
+  function p(s){
+    console.log(s);
+  }
+</script>
+</html>

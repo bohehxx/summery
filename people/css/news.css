@@ -1,0 +1,62 @@
+
+.gsdt li{
+  padding:35px 0 20px 0;
+  border-bottom:1px solid #e9e9e9;
+}
+.gsdt li:last-child{
+  border:none;
+  margin-bottom:20px;
+}
+.gsdt .pic{
+  width:294px;
+  height:201px;
+}
+.gsdt .text{
+ width:610px;
+  margin-left:45px;
+}
+.gsdt .text h1{
+  font-size:22px;
+  padding-bottom:45px;
+  color:#333;
+}
+.gsdt .text .desc{
+  font-size:16px;
+  color:#666;
+  line-height:26px;
+}
+.gsdt .text .source{
+  font-size:16px;
+  color:#999;
+  line-height:28px;
+}
+.tzgg ul{
+  padding-top:20px;
+}
+.tzgg li{
+  padding:17px 0 20px 0;
+  border-bottom:1px solid #e9e9e9;
+}
+.tzgg li:last-child{
+  border:none;
+  margin-bottom:20px;
+}
+.tzgg h1{
+
+  font-size:22px;
+  color:#333;
+  line-height:32px;
+}
+.tzgg .desc{
+  font-size:16px;
+  color:#666;
+  line-height:28px;
+}
+.tzgg .source{
+  font-size:16px;
+  color:#999;
+  line-height:24px;
+}
+a:hover h1,a:hover desc{
+  color:#ce2f21;
+}

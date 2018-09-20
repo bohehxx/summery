@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createFunctions(){
+      var result = new Array();
+      for(var i=0;i<10;i++){
+        result[i] = function(){
+          return i;
+        }
+      }
+      console.log(result);
+      return result;
+    }
+    createFunctions();
+
+//    console.log(result);
+    function createFunctions1(){
+      var result = new Array();
+      for(var i=0;i<10;i++){
+        result[i] = function(num){
+          return num;
+        }
+      }(i)
+      console.log(result);
+      return result;
+    }
+    createFunctions1();
+</script>
+
+</body>
+</html>

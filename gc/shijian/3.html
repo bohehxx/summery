@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="myList">
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+</ul>
+<script>
+  var EventUtil = {
+    addHandler:function(element,type,handler){
+      if(element.addEventListener){
+        element.addEventListener(type,handler,false);
+      }else if(element.attachEvent){
+        element.attachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = handler;
+      }
+    },
+    removeHandler:function(element,type,handler){
+      if(element.removeEventListener){
+        element.removeEventListener(type,handler,false);
+      }else if(element.detachEvent){
+        element.detachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = null;
+      }
+    }
+
+  }
+  EventUtil.addHandler(window,"load",function(){
+    var list = document.getElementById("myList");
+    EventUtil.addHandler(document,"DOMSubtreeModified",function(event){
+      alert(event.type);
+      alert(event.target);
+    })
+    EventUtil.addHandler(document,"DOMNodeRemoved",function(event){
+      alert(event.type);
+      alert(event.target);
+      alert(event.relatedNode);
+    })
+    EventUtil.addHandler(list.firstChild,"DOMNodeRemovedFromDocument",function(event){
+      alert(event.type);
+      alert(event.target);
+    })
+    list.parentNode.removeChild(list);
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.search-page{
+    width:1200px;
+    margin:0px auto;
+}
+.search-page .title{
+    margin:65px auto 50px;
+    font-size:30px;
+    color:#333;
+    text-align:center;
+}
+.about-news{
+    width:1150px;
+    margin:0px auto;
+}
+.about-news li{
+    margin-bottom:36px;
+}
+.about-news .tit{
+    font-size:22px;
+    color:#333;
+
+}
+.about-news .date{
+    font-size:24px;
+    color:#999;
+}
+.about-news a:hover .tit,.about-news a:hover .date{
+    color:#ce2f21;
+}
+.about-book{
+    width:1200px;
+    margin:0px auto;
+
+}
+.about-book img{
+    display:inline-block;
+    width:270px;
+    float:left;
+    margin:35px 30px 35px 0;
+
+}

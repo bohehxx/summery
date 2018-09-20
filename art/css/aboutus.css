@@ -1,0 +1,23 @@
+.aboutus{
+  margin-top:7px;
+}
+.detial{
+  width:770px;
+}
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.pic{
+  width:701px;
+  height:443px;
+  margin:20px auto;
+}
+.description{
+  font-size:12px;
+  color:#666;
+}
+.description p{
+  text-indent:24px;
+  line-height:32px;
+}

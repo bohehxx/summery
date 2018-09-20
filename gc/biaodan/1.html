@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<input type="text" name="tel1" id="texTel1" maxlength="3">
+<input type="text" name="tel2" id="texTel2" maxlength="3">
+<input type="text" name="tel3" id="texTel3" maxlength="4">
+</form>
+<script>
+  var EventUtil = {
+    addHandler:function(element,type,handler){
+      if(element.addEventListener){
+        element.addEventListener(type,handler,false);
+      }else if(element.attachEvent){
+        element.attachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = handler;
+      }
+    },
+    removeHandler:function(element,type,handler){
+      if(element.removeEventListener){
+        element.removeEventListener(type,handler,false);
+      }else if(element.detachEvent){
+        element.detachEvent("on"+type,handler);
+      }else{
+        element["on"+type] = null;
+      }
+    },
+    getEvent:function(event){
+      return event?event:window.event;
+    },
+    getTarget:function(event){
+      return event.target || event.srcElement;
+    },
+    preventDefault:function(event){
+      if(event.preventDefault){
+        event.preventDefault();
+      }else{
+        event.returnValue = false;
+      }
+    },
+    stopPropagation:function(event){
+      if(event.stopPropagation){
+        event.stopPropagation();
+      }else{
+        event.cancelBubble = true;
+      }
+
+    }
+
+  };
+  (function(){
+    function tabForward(event){
+        var event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        console.log(target,'target')
+        if(target.value.length == target.maxLength){
+
+          var form = target.form;
+          for(var i =0,len = form.elements.length;i<len;i++){
+
+            if(form.elements[i] == target){
+                if(form.elements[i+1]){
+                    form.elements[i+1].focus();
+                }
+                // return;
+            }
+
+          }
+        }
+
+
+
+    }
+    var textbox1 = document.getElementById("texTel1");
+    var textbox2 = document.getElementById("texTel2");
+    var textbox3 = document.getElementById("texTel3");
+    EventUtil.addHandler(textbox1,"keyup",tabForward);
+    EventUtil.addHandler(textbox2,"keyup",tabForward);
+    EventUtil.addHandler(textbox3,"keyup",tabForward);
+
+
+  })()
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bookpublish.css">
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+<div class="is-header">
+    <div class="logo"></div>
+    <ul class="nav">
+        <li><a class="nava" href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+        <li><a class="nava" href="aboutus.html">走进安美</a></li>
+        <li><a class="nava" href="news.html">资讯动态</a></li>
+        <li style="position:relative"><a class="nava active" id="bookcolumn">图书出版</a>
+            <ul class="drop-menu">
+                <div class="good"><a href="goodbook.html">精品图书</a></div>
+                <div><a href="newbook.html">新书推荐</a></div>
+                <div><a href="goodperiodical.html">精品期刊</a></div>
+                <div><a href="digitalreading.html">数字阅读</a></div>
+
+            </ul>
+        </li>
+        <li ><a class="nava" href="videoaudio.html">视频音频</a></li>
+        <li><a class="nava" href="author.html">作者风采</a></li>
+        <li><a class="nava" href="https://ahmscbs.tmall.com/" target="_blank">电子商城</a></li>
+        <li><a class="nava" href="concatus.html">联系我们</a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="banner">
+        <img src="images/newsbanner.jpg" />
+
+    </div>
+    <div class="bookpublish clearfix">
+        <div class="sidebar fl">
+            <ul class="leftNav">
+                <li class="first-li"><a href="index.html"><img src="images/whiteline.png" />首页&nbsp;/Home</a></li>
+                <li><a href="aboutus.html">走进安美</a></li>
+                <li><a href="news.html">资讯动态</a></li>
+                <li id="bookNav"><a class="active">图书出版</a>
+                <div class="two-level">
+                    <div><a href="goodbook.html">精品图书</a></div>
+                    <div><a href="newbook.html">新书推荐</a></div>
+                    <div><a href="goodperiodical.html">精品期刊</a></div>
+                    <div><a href="digitalreading.html">数字阅读</a></div>
+                </div>
+
+
+                </li>
+
+                <li><a href="videoaudio.html">视频音频</a></li>
+                <li><a href="author.html">作者风采</a></li>
+                <li><a href="https://ahmscbs.tmall.com/" target="_blank">电子商城</a></li>
+                <li><a href="concatus.html">联系我们</a></li>
+
+            </ul>
+        </div>
+        <div class="booklist fr">
+            <div class="newsHeader">
+                当前位置 > 首页 > 图书出版 ><span class="column">精品图书</span>
+            </div>
+
+            <div class="tab">
+                <ul>
+                    <li class="active">社会热点</li>
+                    <li>历史普及</li>
+                    <li>中国史</li>
+                    <li>世界史</li>
+                    <li>史学理论</li>
+                </ul>
+
+            </div>
+            <div class="totalList">
+            <ul class="list clearfix" id="list1">
+                    <script id="lists1" type="text/html">
+
+                        {{each bookList1 as value i}}
+                        <li>
+                            <div class="book-list">
+
+                                <a class="bookLink">
+
+                                    <div class="book_cemian"></div>
+                                    <div class="bookImg">
+
+
+                            <img src="{{value.cover}}">
+                                    </div>
+                                </a>
+
+                            <p class="book-name">
+                            {{value.name}}</p><p class="book-style">{{value.style}}</p></div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+
+            </ul>
+
+
+
+            </div>
+            <div id="div1" class="pager">
+                <span name="prev" class="disabled" >上一页</span>
+
+                <span name="nav" >
+            <a class="navi">
+                <span style="color: #780502">1</span>
+            </a>
+        </span>
+
+                <span name="next" class="disabled" >下一页</span>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="nav2">
+        <ul class="clearfix">
+            <li class="first-li"><a href="index.html"> 首&nbsp;&nbsp;页</a></li></li>
+            <li><a href="aboutus.html">走进安美</a></li>
+            <li><a href="news.html">资讯动态</a></li>
+            <li><a href="goodbook.html">图书出版</a> </li>
+            <li><a href="videoaudio.html">视频音频</a></li>
+            <li><a href="author.html">作者风采</a></li>
+            <li><a href="https://ahmscbs.tmall.com/">电子商城</a></li>
+            <li><a href="concatus.html">联系我们</a></li>
+        </ul>
+
+
+
+    </div>
+    <div class="code clearfix">
+        <div>
+            <img src="images/wechat.png">
+            <p>安徽美术出版社微信二维码</p>
+
+        </div>
+        <div>
+            <img src="images/cat.png">
+            <p>安徽美术出版社天猫旗舰店</p>
+        </div>
+
+
+
+    </div>
+    <div class="footer">
+        <div class="div1">版权所有：安徽出版美术社 　地址：安徽省合肥市政务文化新区翡翠路1118号</div>
+        <div class="div2">电话：0551-61234567 6888888　邮编：230000　E-mail:admin@press-mart.com 　皖ICP备：00000000号</div>
+        <div class="div3">欢迎您访问本站！您是本站第 <span class="num">272837</span> 位访客！</div>
+    </div>
+
+
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script src="js/artTemplate.js"></script>
+<script src="js/book.js"></script>
+</body>
+</html>

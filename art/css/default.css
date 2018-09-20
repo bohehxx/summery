@@ -1,0 +1,43 @@
+.pager {
+	font-size:12px;
+	text-align: center;
+	line-height: 25px;
+	height:30px;
+	margin:27px auto;
+}
+.pager .navi {
+	display: inline-block;
+	border: #000 1px solid;
+	margin:0 3px;
+	width:25px;
+	height:25px;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	font-size:16px;
+}
+.pager .navi:hover {
+	/*border: #000099 1px solid;*/
+	/*color: #780502;*/
+	/*background:#156ba3;*/
+	color:#156ba3;
+}
+
+.pager .disabled {
+	display: inline-block;
+	border: #eee 1px solid;
+	width:55px;
+	height:25px;
+	cursor: pointer;
+}
+.surebtn{
+	cursor: pointer;
+	background-color:#ad332f;
+	color:#fff;
+	display: inline-block;
+	width:45px;
+	height:25px;
+}
+.cssTxt{
+	text-align: center;
+}

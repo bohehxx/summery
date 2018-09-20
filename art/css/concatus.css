@@ -1,0 +1,30 @@
+.aboutus{
+  margin-top:7px;
+}
+.concat{
+  width:770px;
+}
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.contcat-way{
+  padding-top:50px;
+  padding-left:25px;
+}
+.txt{
+  width:300px;
+}
+.title{
+  font-size:24px;
+  color:#333;
+  margin:20px 0;
+}
+.pic{
+  margin-right:45px;
+}
+.txt p{
+  line-height:32px;
+  font-size:14px;
+  color:#333;
+}

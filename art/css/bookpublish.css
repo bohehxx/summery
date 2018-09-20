@@ -1,0 +1,116 @@
+.content{
+  width:1000px;
+  margin:0px auto;
+}
+.banner{
+  width:1000px;
+  height:280px;
+  margin:0px auto;
+}
+.bookpublish{
+  margin-top:8px;
+}
+.booklist{
+  width:760px;
+}
+.tab{
+  margin:12px auto 20px;
+}
+.tab li{
+  display:inline-block;
+  width:110px;
+  height:38px;
+  line-height:38px;
+  background:#f5f5f5;
+  color:#333;
+  font-size:14px;
+  text-align:center;
+  margin-right:10px;
+  cursor:pointer;
+}
+.tab li:hover,.tab li.active{
+  background:url("../images/selecton.png") no-repeat center center;
+  color:#156ba3;
+}
+.list li{
+  width:161px;
+  display:inline-block;
+  float:left;
+  margin:0px 14px 24px 14px;
+}
+
+.book-list{width:161px;}
+.book-list .book-name{
+  font-size:16px;color:#000;
+  margin:10px auto;
+  text-align:center;}
+.book-list .book-style{
+   font-size:14px;
+   color:#666;
+   text-align:center;
+   line-height:22px;}
+.bookLink {
+  -webkit-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  -moz-box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  box-shadow: 0 1px 16px 0 rgba(153, 153, 153, .6);
+  display: block;
+  width: 148px;
+  height: 207px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 0;
+  background-color: #656566;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px;
+  background: 0 0;
+}
+.bookLink:hover{
+  _zoom: 1;
+}
+.bookImg{
+  transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transition: transform .5s ease 0s;
+  -moz-transition: -moz-transform .5s ease 0s;
+  -ms-transition: -ms-transform .5s ease 0s;
+  -webkit-transition: -webkit-transform .5s ease 0s;
+  -webkit-animation: ffk-animate 1s 1;
+  -moz-animation: ffk-animate 1s 1;
+  -ms-animation: ffk-animate 1s 1;
+  animation: ffk-animate 1s 1;
+  position: relative;
+  width: 148px;
+  height: 207px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transform-style: initial!important;
+  -moz-transform-style: initial!important;
+  transform-style: initial!important;
+}
+.bookImg:hover{
+  transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);
+  -ms-transform: rotateY(-20deg);
+  -webkit-transform: rotateY(-20deg);
+}
+
+#bookNav {
+  position: relative;
+}
+
+#bookNav:after {
+  display: block;
+  position:absolute;
+  content:'';
+  top: 40px;
+  left: 40px;
+  width: 12px;
+  height: 8px;
+  background: url('../images/three.jpg') 0 0 no-repeat;
+}
