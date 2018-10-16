@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     /*background: #fff;*/
-    background: url("../images/repeat-bg.jpg") repeat center center;
+    background: url("../images/bg.png") no-repeat top center;
     min-width: 1000px;
 
 }
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .is-header .logo {
     height: 135px;
-    background: url(../images/logo.png) center center no-repeat ;
+    background: url(../images/logo2.png) center center no-repeat ;
 }
 .is-header .nav {
     height: 36px;
